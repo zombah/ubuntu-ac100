@@ -1,0 +1,8 @@
+arch="armel"
+supported="Toshiba AC100"
+desc="Toshiba AC100-based systems"
+target="Targeted towards the AC100 netbook"
+bootloader="flash-kernel"
+provides=""
+section_image="universe/base"
+do_debug="Yes"
