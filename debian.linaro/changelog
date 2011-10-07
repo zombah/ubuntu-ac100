@@ -1,3 +1,11 @@
+linux-ac100 (2.6.38-1001.1) oneiric-proposed; urgency=low
+
+  * Disable PCI, build modules for MD/DM/RAID and Zcache.
+  * Update to latest git upstream to fix sound from speakers.
+  * Based on upstream commit dc61519faf9523819e783b08970b0a1b5a50ec73
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 07 Oct 2011 13:41:38 +0300
+
 linux-ac100 (2.6.38-1000.1) oneiric; urgency=low
 
   * Fresh restart of packaging using git.
