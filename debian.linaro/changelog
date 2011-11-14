@@ -1,3 +1,10 @@
+linux-ac100 (2.6.38-1002.1) precise; urgency=low
+
+  * New upstream snapshot.
+  * ABI bump
+
+ -- Jani Monoses <jani@ubuntu.com>  Mon, 14 Nov 2011 15:41:45 +0200
+
 linux-ac100 (2.6.38-1001.1) oneiric-proposed; urgency=low
 
   * [CONFIG] Disable PCI, build modules for MD/DM/RAID.
