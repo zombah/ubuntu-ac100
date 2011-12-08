@@ -40,6 +40,7 @@ for arch in $archs; do
 		lpia)   kernarch="x86" ;;
 		sparc)	kernarch="sparc64"	;;
 		armel)  kernarch="arm" ;;
+		armhf)	kernarch="arm" ;;
 		*)	kernarch="$arch"	;;
 	esac
 
@@ -102,22 +103,16 @@ for arch in $archs; do
 	# Can we make this more robust by avoiding $tmpdir completely?
 	# This approach was used for now because I didn't want to change
 	# splitconfig
-	(cd $archconfdir; rm config.common.$arch; $bindir/splitconfig; \
-	    mv config.common config.common.$arch; \
-	    cp config.common.$arch $tmpdir)
+	(cd $archconfdir; rm common.config; $bindir/splitconfig; \
+	    mv common.config $tmpdir/$arch.config)
 done
 
-rm -f $common_conf
-
-# Now run splitconfig on all the config.common.<arch> copied to
+# Now run splitconfig on all the <arch>.common.config copied to
 # $tmpdir
 (cd $tmpdir; $bindir/splitconfig)
-(
-	cd $confdir;
-	rm -f *-full
-	grep -v 'is UNMERGABLE' <$tmpdir/config.common >$common_conf
-	for arch in $archs; do
-		grep -v 'is UNMERGABLE' <$tmpdir/config.common.$arch \
-			>$arch/config.common.$arch
-	done
-)
+mv $tmpdir/common.config $base_conf
+for arch in $archs; do
+	mv $tmpdir/$arch.config $confdir/$arch/common.config
+done
+
+rm -rf $tmpdir

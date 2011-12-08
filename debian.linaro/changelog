@@ -1,3 +1,9 @@
+linux-ac100 (2.6.38-1002.2) precise; urgency=low
+
+  * Enable armhf builds for the linux-ac100 kernel image.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Tue, 06 Dec 2011 03:28:56 -0700
+
 linux-ac100 (2.6.38-1002.1) precise; urgency=low
 
   * New upstream snapshot.

@@ -5,4 +5,5 @@ repo_list=(
 	"http://ports.ubuntu.com/ubuntu-ports/pool/universe/l/linux"
 )
 
-getall armel linaro-mx51 linaro-omap linaro-vexpress
+getall armel ac100
+getall armhf ac100

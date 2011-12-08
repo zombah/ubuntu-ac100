@@ -9,7 +9,7 @@ Build-Conflicts: findutils (= 4.4.1-1ubuntu1)
 Vcs-Git: git://git.linaro.org/jcrigby/linux-linaro.git
 
 Package: linux-headers-PKGVER-ABINUM
-Architecture: armel
+Architecture: armel armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
