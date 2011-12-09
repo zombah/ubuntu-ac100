@@ -1,3 +1,9 @@
+linux-ac100 (3.0.8-1.1) precise; urgency=low
+
+  * Sync up to upstream's 3.0 based tree.
+
+ -- Jani Monoses <jani@ubuntu.com>  Thu, 08 Dec 2011 23:55:46 +0200
+
 linux-ac100 (2.6.38-1002.2) precise; urgency=low
 
   * Enable armhf builds for the linux-ac100 kernel image.
