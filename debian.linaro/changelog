@@ -1,3 +1,10 @@
+linux-ac100 (3.0.8-2.1) precise; urgency=low
+
+  * Sync up to upstream's 3.0 based tree.
+  * [CONFIG] Enable CONFIG_SND_SOC_TEGRA_ALC5632 for sound support
+
+ -- Jani Monoses <jani@ubuntu.com>  Thu, 29 Dec 2011 14:54:21 +0200
+
 linux-ac100 (3.0.8-1.1) precise; urgency=low
 
   * Sync up to upstream's 3.0 based tree.
