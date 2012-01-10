@@ -46,9 +46,10 @@ install-%: target_flavour = $*
 install-%: $(stampdir)/stamp-build-% checks-%
 	dh_testdir
 	dh_testroot
-	dh_clean -k -p$(bin_pkg_name)-$*
-	dh_clean -k -p$(hdrs_pkg_name)-$*
-	dh_clean -k -p$(dbg_pkg_name)-$*
+	dh_prep -p$(bin_pkg_name)-$*
+	dh_prep -p$(hdrs_pkg_name)-$*
+	dh_prep -p$(dbg_pkg_name)-$*
+	dh_prep -p$(tools_pkg_name)-$*
 
 	# The main image
 	# compress_file logic required because not all architectures
@@ -226,7 +227,7 @@ hmake := $(MAKE) -C $(CURDIR) O=$(headers_tmp) SUBLEVEL=$(SUBLEVEL) \
 install-arch-headers:
 	dh_testdir
 	dh_testroot
-	dh_clean -k -plinux-libc-dev
+	dh_prep -plinux-libc-dev
 
 	rm -rf $(headers_tmp)
 	install -d $(headers_tmp) $(headers_dir)/usr/include/
@@ -357,8 +358,9 @@ install-perarch: toolspkgdir = $(CURDIR)/debian/$(tools_pkg_name)
 install-perarch: $(stampdir)/stamp-build-perarch
 	# Add the tools.
 ifeq ($(do_tools),true)
+	dh_strip -p$(toolspkg)
 	install -d $(toolspkgdir)/usr/bin
-	install -s -m755 $(builddir)/tools-$*/tools/perf/perf \
+	install -m755 $(builddir)/tools-$*/tools/perf/perf \
 		$(toolspkgdir)/usr/bin/perf_$(abi_release)
 endif
 

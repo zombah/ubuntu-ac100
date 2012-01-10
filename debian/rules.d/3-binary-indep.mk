@@ -5,7 +5,7 @@ docdir = $(CURDIR)/debian/$(docpkg)/usr/share/doc/$(docpkg)
 install-doc:
 	dh_testdir
 	dh_testroot
-	dh_clean -k -p$(docpkg)
+	dh_prep -p$(docpkg)
 
 	install -d $(docdir)
 ifeq ($(do_doc_package_content),true)
@@ -28,7 +28,7 @@ indep_hdrdir = $(CURDIR)/debian/$(indep_hdrpkg)/usr/src/$(indep_hdrpkg)
 install-headers:
 	dh_testdir
 	dh_testroot
-	dh_clean -k -p$(indep_hdrpkg)
+	dh_prep -p$(indep_hdrpkg)
 
 	install -d $(indep_hdrdir)
 	find . -path './debian' -prune -o -path './$(DEBIAN)' -prune \
@@ -51,7 +51,7 @@ balldir = $(CURDIR)/debian/$(srcpkg)/usr/src/$(srcpkg)/$(srcpkg)
 install-source:
 	dh_testdir
 	dh_testroot
-	dh_clean -k -p$(srcpkg)
+	dh_prep -p$(srcpkg)
 
 	install -d $(srcdir)
 ifeq ($(do_source_package_content),true)
@@ -79,7 +79,7 @@ install-tools: toolsman = $(CURDIR)/debian/$(toolspkg)/usr/share/man
 install-tools:
 	dh_testdir
 	dh_testroot
-	dh_clean -k -p$(toolspkg)
+	dh_prep -p$(toolspkg)
 
 	install -d $(toolsbin)
 	install -d $(toolsman)/man1
