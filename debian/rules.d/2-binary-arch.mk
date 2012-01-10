@@ -358,7 +358,6 @@ install-perarch: toolspkgdir = $(CURDIR)/debian/$(tools_pkg_name)
 install-perarch: $(stampdir)/stamp-build-perarch
 	# Add the tools.
 ifeq ($(do_tools),true)
-	dh_strip -p$(toolspkg)
 	install -d $(toolspkgdir)/usr/bin
 	install -m755 $(builddir)/tools-$*/tools/perf/perf \
 		$(toolspkgdir)/usr/bin/perf_$(abi_release)
@@ -372,6 +371,7 @@ ifeq ($(do_tools),true)
 	dh_installdocs -p$(toolspkg)
 	dh_compress -p$(toolspkg)
 	dh_fixperms -p$(toolspkg)
+	dh_strip -p$(toolspkg)
 	dh_shlibdeps -p$(toolspkg)
 	dh_installdeb -p$(toolspkg)
 	dh_gencontrol -p$(toolspkg)
