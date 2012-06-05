@@ -5,5 +5,4 @@ repo_list=(
 	"http://ports.ubuntu.com/ubuntu-ports/pool/universe/l/linux"
 )
 
-getall armel ac100
 getall armhf ac100

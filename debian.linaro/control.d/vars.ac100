@@ -1,4 +1,4 @@
-arch="armel armhf"
+arch="armhf"
 supported="Toshiba AC100"
 desc="Toshiba AC100-based systems"
 target="Targeted towards the AC100 netbook"

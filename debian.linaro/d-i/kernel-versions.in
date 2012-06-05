@@ -1,5 +1,4 @@
 # arch	version		flavour		installedname			suffix	bdep
-armel	PKGVER-ABINUM	ac100	PKGVER-ABINUM-ac100	-
 armhf	PKGVER-ABINUM	ac100	PKGVER-ABINUM-ac100	-
 # Ports
 # arch	version		flavour		installedname			suffix	bdep
