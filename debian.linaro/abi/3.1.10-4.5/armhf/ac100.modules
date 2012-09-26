@@ -177,6 +177,7 @@ gf2k
 gfs2
 ghash-generic
 gl620a
+g_mass_storage
 gpio_keys_polled
 grip
 grip_mp
@@ -393,6 +394,7 @@ raid10
 raid456
 raid6_pq
 realtek
+regmap-i2c
 reiserfs
 rfcomm
 rmd128
