@@ -1,3 +1,9 @@
+linux-ac100 (3.1.10-5.7) UNRELEASED; urgency=low
+
+  * Fix FTBFS with gcc-4.7
+
+ -- Jani Monoses <jani.monoses@canonical.com>  Fri, 28 Sep 2012 12:42:07 +0300
+
 linux-ac100 (3.1.10-5.6) quantal; urgency=low
 
   * Rebase on nvidia/l4t/rel-r16 and update configs.
