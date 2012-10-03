@@ -342,7 +342,7 @@ $(stampdir)/stamp-prepare-perarch:
 	@echo "Preparing perarch ..."
 ifeq ($(do_tools),true)
 	install -d $(builddir)/tools-$*
-	for i in *; do ln -s $(CURDIR)/$$i $(builddir)/tools-$*/; done
+	for i in *; do ln -sf $(CURDIR)/$$i $(builddir)/tools-$*/; done
 	rm $(builddir)/tools-$*/tools
 	rsync -a tools/ $(builddir)/tools-$*/tools/
 endif
