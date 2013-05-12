@@ -250,6 +250,10 @@ config TEGRA_PWM
 	help
 	  Enable support for the Tegra PWM controller(s).
 
+config TEGRA_ENABLE_OC
+	bool "Enable overclocking ala clemsyn of Tegra2"
+	default n
+
 config TEGRA_FIQ_DEBUGGER
 	bool "Enable the FIQ serial debugger on Tegra"
 	default n
